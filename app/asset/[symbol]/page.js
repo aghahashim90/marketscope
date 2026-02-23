@@ -3,11 +3,11 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'next/navigation'
 import dynamic from 'next/dynamic'
-import LoadingSpinner from '@/components/LoadingSpinner'
-import ScenarioOutlook from '@/components/ScenarioOutlook'
-import RiskFactors from '@/components/RiskFactors'
+import LoadingSpinner from '../../../components/LoadingSpinner'
+import ScenarioOutlook from '../../../components/ScenarioOutlook'
+import RiskFactors from '../../../components/RiskFactors'
 
-const PriceChart = dynamic(() => import('@/components/PriceChart'), { ssr: false })
+const PriceChart = dynamic(() => import('../../../components/PriceChart'), { ssr: false })
 
 export default function AssetDetailPage() {
   const params = useParams()
@@ -133,14 +133,13 @@ export default function AssetDetailPage() {
           <PriceChart data={assetData.historicalPrices} />
         </div>
 
-        {/* Market Summary */}
+        {/* Analysis */}
         {analysis && (
           <>
             <div className="bg-white rounded-lg shadow-md p-6 mb-6">
               <h2 className="text-xl font-semibold text-gray-900 mb-3">Market Summary</h2>
               <p className="text-gray-700 leading-relaxed">{analysis.marketSummary}</p>
             </div>
-
             <ScenarioOutlook scenarios={analysis.scenarios} />
             <RiskFactors risks={analysis.riskFactors} />
           </>

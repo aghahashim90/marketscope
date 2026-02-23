@@ -1,4 +1,4 @@
-import { getCryptoData } from '@/lib/coinGecko'
+import { getCryptoData } from '../../../lib/coinGecko'
 
 export default async function handler(req, res) {
   const { coin } = req.query

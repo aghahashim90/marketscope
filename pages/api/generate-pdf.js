@@ -1,4 +1,4 @@
-import { generatePDF } from '@/lib/pdfGenerator'
+import { generatePDF } from '../../lib/pdfGenerator'
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
