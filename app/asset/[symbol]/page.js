@@ -111,7 +111,6 @@ export default function AssetDetailPage() {
     <div className="min-h-screen bg-gray-50 py-8 px-4">
       <div className="max-w-5xl mx-auto">
 
-        {/* Header */}
         <div className="bg-white rounded-lg shadow-md p-6 mb-6 border-l-4 border-blue-600">
           <p className="text-sm text-gray-500 mb-1 uppercase tracking-wide">MarketScope Analysis</p>
           <h1 className="text-3xl font-bold text-gray-900 mb-3">{assetData.name}</h1>
@@ -127,13 +126,11 @@ export default function AssetDetailPage() {
           </div>
         </div>
 
-        {/* Chart */}
         <div className="bg-white rounded-lg shadow-md p-6 mb-6">
           <h2 className="text-xl font-semibold text-gray-900 mb-4">30-Day Price Chart</h2>
           <PriceChart data={assetData.historicalPrices} />
         </div>
 
-        {/* Analysis */}
         {analysis && (
           <>
             <div className="bg-white rounded-lg shadow-md p-6 mb-6">
@@ -145,7 +142,6 @@ export default function AssetDetailPage() {
           </>
         )}
 
-        {/* PDF Button */}
         <div className="text-center mt-8 mb-12">
           <button
             onClick={handleDownloadPDF}

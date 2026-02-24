@@ -1,4 +1,4 @@
-import SearchBar from '../../components/SearchBar'
+import SearchBar from '../components/SearchBar'
 
 export default function HomePage() {
   return (
@@ -15,7 +15,7 @@ export default function HomePage() {
         </p>
         <SearchBar />
         <p className="text-xs text-gray-400 mt-6">
-          Supports Bitcoin, Ethereum & Gold (XAU/USD)
+          Supports Bitcoin, Ethereum and Gold (XAU/USD)
         </p>
       </div>
     </div>
